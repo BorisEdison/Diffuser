@@ -1,0 +1,10 @@
+blog -> templates -> blog -> template.html
+
+python manage.py startapp users
+after creating an app add 'users.app.UserConfig' in the settings.py of main project folder
+
+python manage.py sqlmigrate blog 0001
+
+python manage.py shell
+
+.modelname_set

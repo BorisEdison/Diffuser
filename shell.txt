@@ -1,0 +1,61 @@
+>>> from blog.models import Post
+>>> from django.contrib.auth.models import User
+>>> User.objects.all()
+<QuerySet [<User: boris>]>
+>>> User.objects.first()
+<User: boris>
+>>> User.objects.filter(username='Boris')
+<QuerySet []>
+>>> User.objects.filter(username='boris')
+<QuerySet [<User: boris>]>
+>>> User.objects.filter(username='boris').first()
+<User: boris>
+>>> user = User.objects.filter(username='boris').first()
+>>> user
+<User: boris>
+>>> user.id
+1
+>>> user.pk
+1
+>>> user = User.objects.get(id=1)
+>>> user
+<User: boris>
+>>> Post.objects.all()
+<QuerySet []>
+>>> post_1 = Post(title='blog 1', content='First Post Content!', author = user)
+>>> Post.objects.all()
+<QuerySet []>
+>>> post_1.save()
+>>> Post.objects.all()
+<QuerySet [<Post: Post object (1)>]>
+>>> exit()
+
+
+>>> from blog.models import Post
+>>> from django.contrib.auth.models import User
+>>> Post.objects.all()
+<QuerySet [<Post: blog 1>]>
+>>> user = User.objects.filter(username = 'boris').first()
+>>> user
+<User: boris>
+>>> post_2 = Post(title = 'Blog 2', content = 'Second Post Content!', author_id = user.id)
+>>> post_2.save()
+>>> Post.objects.all()
+<QuerySet [<Post: blog 1>, <Post: Blog 2>]>
+>>> post = Post.objects.first()
+>>> post.content
+'First Post Content!'
+>>> post.date_posted
+datetime.datetime(2022, 7, 9, 6, 20, 27, 788956, tzinfo=datetime.timezone.utc)
+>>> post.author
+<User: boris>
+>>> post.author.email
+'boris@gmail.com'
+>>> user.post_set
+<django.db.models.fields.related_descriptors.create_reverse_many_to_one_manager.<locals>.RelatedManager object at 0x000002038F605F90>
+>>> user.post_set.all()
+<QuerySet [<Post: blog 1>, <Post: Blog 2>]>
+>>> user.post_set.create(title='Blog 3', content = 'Third Post Content!')
+<Post: Blog 3>
+>>> Post.objects.all()
+<QuerySet [<Post: blog 1>, <Post: Blog 2>, <Post: Blog 3>]>
