@@ -59,3 +59,17 @@ datetime.datetime(2022, 7, 9, 6, 20, 27, 788956, tzinfo=datetime.timezone.utc)
 <Post: Blog 3>
 >>> Post.objects.all()
 <QuerySet [<Post: blog 1>, <Post: Blog 2>, <Post: Blog 3>]>
+
+
+>>> from django.contrib.auth.models import User
+>>> user = User.objects.filter(username='boris').first()
+>>> user
+<User: boris>
+>>> user.profile
+<Profile: boris Profile>
+>>> user.profile.image
+<ImageFieldFile: profile_pics/03c89dbf0325753a847ed914f490ff6d.jpg>
+>>> user.profile.image.width
+850
+>>> user.profile.image.url
+'/profile_pics/03c89dbf0325753a847ed914f490ff6d.jpg'
