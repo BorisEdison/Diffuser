@@ -14,3 +14,4 @@ class based views: 1)list views 2)detailed views 3)create views 4)update views 5
 heroku create diffuserboris
 heroku open
 git push heroku main
+heroku logs --tail
