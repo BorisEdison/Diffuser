@@ -1,1 +1,3 @@
-web: gunicorn Diffuser.wsgi --log-file -
+web: gunicorn Diffuser.wsgi:application --log-file - --log-level debug
+python manage.py collectstatic --noinput
+manage.py migrate
