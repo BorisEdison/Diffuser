@@ -10,3 +10,7 @@ python manage.py shell
 .modelname_set
 
 class based views: 1)list views 2)detailed views 3)create views 4)update views 5)delete views
+
+heroku create diffuserboris
+heroku open
+git push heroku main
