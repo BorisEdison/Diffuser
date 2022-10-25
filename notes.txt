@@ -26,3 +26,5 @@ heroku config:set EMAIL_HOST_USER="
 heroku ps:scale web=1
 
 Procfile >> web: gunicorn Diffuser.wsgi
+
+heroku addons:create heroku-postgresql:hobby-dev
