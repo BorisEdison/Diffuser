@@ -22,3 +22,7 @@ heroku config:set SECRET_KEY=""
 heroku config:set DEBUG_VALUE="True"
 heroku config:set EMAIL_HOST_PASSWORD=""
 heroku config:set EMAIL_HOST_USER="
+
+heroku ps:scale web=1
+
+Procfile >> web: gunicorn Diffuser.wsgi
