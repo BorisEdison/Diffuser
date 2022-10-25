@@ -1,1 +1,1 @@
-web: gunicorn Diffuser.wsgi.application
+web: gunicorn Diffuser.wsgi --log-file -
