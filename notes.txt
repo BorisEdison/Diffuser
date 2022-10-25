@@ -28,3 +28,7 @@ heroku ps:scale web=1
 Procfile >> web: gunicorn Diffuser.wsgi
 
 heroku addons:create heroku-postgresql:hobby-dev
+
+heroku run python manage.py migrate
+
+heroku run bash
