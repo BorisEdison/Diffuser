@@ -10,3 +10,18 @@ python manage.py shell
 .modelname_set
 
 class based views: 1)list views 2)detailed views 3)create views 4)update views 5)delete views
+
+
+sudo nano /etc/ssh/sshd_config
+
+sudo systemctl restart ssh
+
+ssh boris@HoneyBadger
+
+ssh -i "Diffuser-Server.pem" ubuntu@3.12.190.96
+
+https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys-on-ubuntu-20-04
+
+https://aws.amazon.com/premiumsupport/knowledge-center/ec2-linux-fix-permission-denied-errors/#:~:text=%22Permission%20denied%20(publickey)%22%20and%20%22Authentication%20failed%2C,The%20incorrect%20SSH%20public%20key%20(.
+
+allowed host = ['*'] or the concerned ip address
