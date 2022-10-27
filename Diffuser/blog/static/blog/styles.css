@@ -27,6 +27,15 @@ ul {
 .site-header .navbar-nav .nav-link.active {
   font-weight: 500;
 }
+/* Nav Pill */
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link{
+  background-color: #51C4D3;
+  color: #51C4D3;
+  border-color: transparent;
+}
+.nav-pills-link {
+  color: #51C4D3;
+}
 
 .content-section {
   background: #ffffff;
