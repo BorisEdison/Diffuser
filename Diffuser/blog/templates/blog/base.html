@@ -84,7 +84,7 @@
                   {% endblock %}
       
                   {% block calendarButton %}
-                  <button class="nav-link nav-pills-link text-left d-flex align-items-center" id="edit-tab" data-bs-toggle="pill" data-bs-target="#edit" type="button" role="tab" aria-controls="edit" aria-selected="false">
+                  <button class="nav-link nav-pills-link text-left d-flex align-items-center" onClick="window.location.href='{% url 'calendar' %}';" id="calendar-tab" data-bs-toggle="pill" data-bs-target="#edit" type="button" role="tab" aria-controls="calendar" aria-selected="false">
                     <span class="iconify" data-icon="akar-icons:calendar" data-width="20" data-height="20"></span>
                     &nbsp;Calendar
                   </button>

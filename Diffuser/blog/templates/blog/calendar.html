@@ -1,7 +1,18 @@
 {% extends "blog/base.html" %}
 
-{% block content %}
+{% block calendarButton %}
+<button class="nav-link active nav-pills-link text-left d-flex align-items-center" id="calendar-tab" data-bs-toggle="pill" data-bs-target="#calendar" type="button" role="tab" aria-controls="calendar" aria-selected="false">
+  <span class="iconify" data-icon="akar-icons:calendar" data-width="20" data-height="20"></span>
+  &nbsp;Calendar
+</button>
+{% endblock %}
+    
 
-    
-    
-{% endblock content %}
+{% block calendarContent %}
+
+<div class="tab-pane fade show active" id="calendar" role="tabpanel" aria-labelledby="v-pills-calendar-tab">
+    <div class="content-section d-flex justify-content-center align-items-center" style="overflow-x: auto; margin-bottom: 13vh">
+        <iframe class="m-4" style="overflow-x: auto" src="https://calendar.google.com/calendar/embed?height=450&wkst=1&bgcolor=%23ffffff&ctz=Asia%2FKolkata&src=ZGlmZnVzZXIuYm9yaXNlZGlzb25AZ21haWwuY29t&src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&src=ZW4uaW5kaWFuI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%23039BE5&color=%2333B679&color=%230B8043" style="border:solid 1px #777" width="650" height="450" frameborder="0" scrolling="no"></iframe>
+    </div>
+</div>    
+{% endblock %}
