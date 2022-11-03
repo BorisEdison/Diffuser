@@ -60,33 +60,33 @@
 
                 <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
       
-                  {% block dashboardButton %}
+                  {% block latestButton %}
                   <button class="nav-link nav-pills-link" id="dashboard-tab" data-bs-toggle="pill" data-bs-target="#dashboard" type="button" role="tab" aria-controls="dashboard" aria-selected="true">
                     <span class="iconify" data-icon="ci:dashboard" data-width="20" data-height="20"></span>
-                    Dashboard
+                    Latest Posts
                   </button>
                   {% endblock %}
       
-                  {% block announcementButton %}
+                  {% block createButton %}
                   <button class="nav-link nav-pills-link" id="announcement-tab" data-bs-toggle="pill" data-bs-target="#announcement" type="button" role="tab" aria-controls="announcement" aria-selected="false">
                     <span class="iconify" data-icon="bx:message-detail" data-width="20" data-height="20"></span>
-                    Announcement
+                    Create Post
                     <span class="badge rounded-pill text-bg-danger" style="background-color: #DC3545 !important;">{% if unread_announcement != 0 %}{{unread_announcement}}{% endif %}</span>
                   </button>
                   {% endblock %}
       
-                  {% block meetingButton %}
+                  {% block editButton %}
                   <button class="nav-link nav-pills-link" id="meeting-tab" data-bs-toggle="pill" data-bs-target="#meeting" type="button" role="tab" aria-controls="meeting" aria-selected="false">
                     <span class="iconify-inline" data-icon="akar-icons:schedule" data-width="21" data-height="21"></span>
-                    Meeting
+                    Edit Profile
                     <span class="badge rounded-pill text-bg-danger" style="background-color: #DC3545 !important;">{% if unseen_meetings != 0 %}{{unseen_meetings}}{% endif %}</span>
                   </button>
                   {% endblock %}
       
-                  {% block editButton %}
+                  {% block calendarButton %}
                   <button class="nav-link nav-pills-link" id="edit-tab" data-bs-toggle="pill" data-bs-target="#edit" type="button" role="tab" aria-controls="edit" aria-selected="false">
                     <span class="iconify" data-icon="akar-icons:edit" data-width="20" data-height="20"></span>
-                    Edit Profile
+                    Calendar
                   </button>
                   {% endblock %}
       
@@ -134,25 +134,27 @@
   <!--footer-->
   <div id="about">
     <footer class="site-footer">
-      <hr>
+      <hr class="mb-3">
       <div class="container">
         <div class="row">
-          <div class="col-md-8 col-sm-6 col-xs-12">
-              <img src="{% static 'blog/logo/logo.png' %}" class=" me-2" width="50" height="50" alt="{{user.first_name}}" >
-            </a>
-            <p class="copyright-text">Platform for everyone to start blogging
-            </p>
+          <div class="col-lg-4 col-md-4 col-sm-4">
+              <div class="text-center">
+                <h6 class="fw-bold"><b>About Diffuser</b></h6>
+                <p class="copyright-text mb-2">Diffuser is platform for everyone to start blogging</p>
+              </div>
+          </div>
+          <div class="col-4 d-xs-none">
           </div>
 
-          <div class="col-md-4 col-sm-6 col-xs-12">
-              <a>
-                <span class="iconify" data-icon="akar-icons:github-fill" data-width="25" data-height="25"></span>
+          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-2 d-flex justify-content-center align-items-center">
+              <a href="https://github.com/BorisEdison" target="_blank" style="text-decoration: none; color: #444444">
+                <span class="iconify" data-icon="akar-icons:github-fill" data-width="30" data-height="30"></span>
               </a>
-              <a>
-                <span class="iconify" data-icon="akar-icons:linkedin-box-fill" data-width="25" data-height="25"></span>
+              <a class="m-3 mt-0 mb-0" href="https://www.linkedin.com/in/borisedison/" target="_blank" style="text-decoration: none; color: #444444">
+                <span class="iconify" data-icon="akar-icons:linkedin-box-fill" data-width="30" data-height="30"></span>
               </a>
-              <a>
-                <span class="iconify" data-icon="akar-icons:instagram-fill" data-width="25" data-height="25"></span>
+              <a href="https://www.instagram.com/_boris_edison_/" target="_blank" style="text-decoration: none; color: #444444">
+                <span class="iconify" data-icon="akar-icons:instagram-fill" data-width="30" data-height="30"></span>
               </a>
           </div>
         </div>
@@ -161,7 +163,7 @@
       <div class="row" style="margin-right: 0; margin-left: 0">
         <div class="col-12 d-flex justify-content-center">
           <p class="">Made with ❤️ by
-            <a class="contrib-link" href="https://www.linkedin.com/in/borisedison/">Boris Edison</a>
+            <a class="contrib-link" href="https://www.linkedin.com/in/borisedison/" target="_blank">Boris Edison</a>
           </p>
         </div>
       </div>
