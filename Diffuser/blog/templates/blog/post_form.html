@@ -1,7 +1,15 @@
 {% extends "blog/base.html" %}
 {% load crispy_forms_tags %}
 
-{% block content %}
+{% block createButton %}
+<button class="nav-link nav-pills-link text-left active d-flex align-items-center" onClick="window.location.href='{% url 'post-create' %}';" id="create-tab" data-bs-toggle="pill" data-bs-target="#announcement" type="button" role="tab" aria-controls="announcement" aria-selected="false">
+  <span class="iconify" data-icon="gridicons:create" data-width="20" data-height="20"></span>
+  &nbsp;Create Post
+  <span class="badge rounded-pill text-bg-danger" style="background-color: #DC3545 !important;">{% if unread_announcement != 0 %}{{unread_announcement}}{% endif %}</span>
+</button>
+{% endblock %}
+
+{% block createContent %}
 
     <div class="content-section">
         <form method="POST">
@@ -17,4 +25,4 @@
 
     </div>
     
-{% endblock content %}
+{% endblock %}

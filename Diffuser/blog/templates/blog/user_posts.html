@@ -1,7 +1,16 @@
 {% extends "blog/base.html" %}
 
-{% block content %}
-    <h3 class="mb-3">Posts by {{view.kwargs.username}} ({{page_obj.paginator.count}})</h3>
+{% block latestButton %}
+<button class="nav-link active nav-pills-link text-left d-flex align-items-center"  onClick="window.location.href='{% url 'blog-home' %}';" id="latest-tab" data-bs-toggle="pill" data-bs-target="#latest" type="button" role="tab" aria-controls="latest" aria-selected="true">
+  <span class="iconify" data-icon="ic:outline-upcoming" data-width="20" data-height="20"></span>
+  &nbsp;Latest Posts
+</button>
+{% endblock %}
+
+{% block latestContent %}
+<div class="tab-pane fade show active" id="latest" role="tabpanel" aria-labelledby="v-pills-latest-tab">
+
+    <h3 class="mb-3">{{page_obj.paginator.count}} Posts by {{view.kwargs.username}} </h3>
 
     {% for post in posts %}
     <article class="media content-section">
@@ -41,4 +50,6 @@
 
     {% endif %}
 
-{% endblock content %}
+  </div>
+
+{% endblock %}

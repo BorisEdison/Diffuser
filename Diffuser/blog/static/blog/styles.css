@@ -29,12 +29,15 @@ ul {
 }
 /* Nav Pill */
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link{
-  background-color: #51C4D3;
-  color: #51C4D3;
-  border-color: transparent;
+  background-color: #126E82 !important;
+  color: white !important;
+  border-color: transparent !important;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 }
 .nav-pills-link {
-  color: #51C4D3;
+  color: #126E82 !important;
+  background-color: transparent;
+  border-color: transparent !important;
 }
 
 .content-section {
@@ -43,6 +46,7 @@ ul {
   border: 1px solid #dddddd;
   border-radius: 3px;
   margin-bottom: 20px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
 .article-title {
   color: #126E82;
@@ -61,6 +65,7 @@ a.article-title:hover {
   height: 65px;
   width: 65px;
   margin-right: 16px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px !important;
 }
 
 .article-metadata {

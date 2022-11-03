@@ -23,7 +23,7 @@
 <body>
 
     <header class="site-header">
-        <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top pt-0 pb-0">
+        <nav class="navbar navbar-expand-md shadow-lg navbar-dark bg-steel fixed-top pt-0 pb-0">
             <div class="container">
             <a class="navbar-brand mr-4" href="{% url 'blog-home' %}">
               <img src="{% static 'blog/logo/logo.png' %}" class=" me-2" width="50" height="50" alt="{{user.first_name}}" >
@@ -61,55 +61,37 @@
                 <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
       
                   {% block latestButton %}
-                  <button class="nav-link nav-pills-link" id="dashboard-tab" data-bs-toggle="pill" data-bs-target="#dashboard" type="button" role="tab" aria-controls="dashboard" aria-selected="true">
-                    <span class="iconify" data-icon="ci:dashboard" data-width="20" data-height="20"></span>
-                    Latest Posts
+                  <button class="nav-link nav-pills-link text-left d-flex align-items-center" onClick="window.location.href='{% url 'blog-home' %}';" id="latest-tab" data-bs-toggle="pill" data-bs-target="#latest" type="button" role="tab" aria-controls="latest" aria-selected="true">
+                    <span class="iconify" data-icon="ic:outline-upcoming" data-width="20" data-height="20"></span>
+                    &nbsp;Latest Posts
                   </button>
                   {% endblock %}
       
                   {% block createButton %}
-                  <button class="nav-link nav-pills-link" id="announcement-tab" data-bs-toggle="pill" data-bs-target="#announcement" type="button" role="tab" aria-controls="announcement" aria-selected="false">
-                    <span class="iconify" data-icon="bx:message-detail" data-width="20" data-height="20"></span>
-                    Create Post
+                  <button class="nav-link nav-pills-link text-left d-flex align-items-center" onClick="window.location.href='{% url 'post-create' %}';" id="create-tab" data-bs-toggle="pill" data-bs-target="#announcement" type="button" role="tab" aria-controls="announcement" aria-selected="false">
+                    <span class="iconify" data-icon="gridicons:create" data-width="20" data-height="20"></span>
+                    &nbsp;Create Post
                     <span class="badge rounded-pill text-bg-danger" style="background-color: #DC3545 !important;">{% if unread_announcement != 0 %}{{unread_announcement}}{% endif %}</span>
                   </button>
                   {% endblock %}
       
                   {% block editButton %}
-                  <button class="nav-link nav-pills-link" id="meeting-tab" data-bs-toggle="pill" data-bs-target="#meeting" type="button" role="tab" aria-controls="meeting" aria-selected="false">
-                    <span class="iconify-inline" data-icon="akar-icons:schedule" data-width="21" data-height="21"></span>
-                    Edit Profile
+                  <button class="nav-link nav-pills-link text-left d-flex align-items-center" onClick="window.location.href='{% url 'profile' %}';" id="meeting-tab" data-bs-toggle="pill" data-bs-target="#meeting" type="button" role="tab" aria-controls="meeting" aria-selected="false">
+                    <span class="iconify-inline" data-icon="akar-icons:edit" data-width="21" data-height="21"></span>
+                    &nbsp;Edit Profile
                     <span class="badge rounded-pill text-bg-danger" style="background-color: #DC3545 !important;">{% if unseen_meetings != 0 %}{{unseen_meetings}}{% endif %}</span>
                   </button>
                   {% endblock %}
       
                   {% block calendarButton %}
-                  <button class="nav-link nav-pills-link" id="edit-tab" data-bs-toggle="pill" data-bs-target="#edit" type="button" role="tab" aria-controls="edit" aria-selected="false">
-                    <span class="iconify" data-icon="akar-icons:edit" data-width="20" data-height="20"></span>
-                    Calendar
+                  <button class="nav-link nav-pills-link text-left d-flex align-items-center" id="edit-tab" data-bs-toggle="pill" data-bs-target="#edit" type="button" role="tab" aria-controls="edit" aria-selected="false">
+                    <span class="iconify" data-icon="akar-icons:calendar" data-width="20" data-height="20"></span>
+                    &nbsp;Calendar
                   </button>
                   {% endblock %}
       
                 </div>
 
-              <ul class="list-group">
-                  <li class="list-group-item list-group-item-light">
-                    <a class="" href="{% url 'blog-home' %}">Latest Posts</a>
-                  </li>
-
-                  <li class="list-group-item list-group-item-light">
-                    <a class="" href="{% url 'post-create' %}">Create Post</a>
-                  </li>
-
-                  <li class="list-group-item list-group-item-light">
-                    <a class="" href="{% url 'profile' %}">Edit Profile</a>
-                  </li>
-
-                  <li class="list-group-item list-group-item-light">
-                    <a>Calendar</a>
-                  </li>
-                </ul>
-              </p>
             </div>
           </div>
           {% endif %}
@@ -124,8 +106,25 @@
             {% endif %}
 
             {% block content %}
+
+            {% endblock %}
+
+            {% block latestContent %}
             
             {% endblock %}
+
+            {% block createContent %}
+            
+            {% endblock %}
+
+            {% block editContent %}
+            
+            {% endblock %}
+
+            {% block calendarContent %}
+            
+            {% endblock %}
+
           </div>
 
         </div>
