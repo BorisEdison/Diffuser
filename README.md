@@ -10,8 +10,8 @@
 ## Built With
 
 ![Django](https://img.shields.io/badge/Django-0C4B33?&style=for-the-badge&logo=django&logoColor=white)
-![HTML](https://img.shields.io/badge/HTML-239120?style=for-the-badge&logo=html5&logoColor=white)
-![CSS](https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white)
+![HTML](https://img.shields.io/badge/HTML-E75028?style=for-the-badge&logo=html5&logoColor=white)
+![CSS](https://img.shields.io/badge/CSS-2A93C9?&style=for-the-badge&logo=css3&logoColor=white)
 ![Bootsrap](https://img.shields.io/badge/Bootstrap-7952B3?&style=for-the-badge&logo=bootstrap&logoColor=white)
 ![iconify](https://img.shields.io/badge/iconify-1767AA?&style=for-the-badge&logo=iconify&logoColor=white)
 ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
