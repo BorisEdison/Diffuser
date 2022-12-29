@@ -85,6 +85,8 @@ How To Deploy Django App with Nginx, Gunicorn, PostgreSQL and Let’s Encrypt SS
 
 Give a ⭐ if you like this project and feel free to make pull requests
 
+<a href="https://www.buymeacoffee.com/borisedison" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-green.png" alt="Buy Me A Coffee" height= "40px" width= "130px" ></a>
+
 ## Contributors <a id="contributors"></a>
   - Boris Edison<br> 
   [![Github](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/BorisEdison)
